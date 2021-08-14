@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="display: inline;" >Edit User {{user[0].id}}</h1>
+    <a style="display: inline;" href="/users">Home</a>
+    <form action="/update_user/{{user[0].id}}" method="POST">
+        <label for="fname">First Name:</label><br>
+        <input value="{{user[0].first_name}}" type="text" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input value="{{user[0].last_name}}" type="text" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input value="{{user[0].email}}" type="text" name="email"><br><br>
+        <input type="submit" value="Update">
+        <a href="/users/{{user[0].id}}">Show User </a>
+    </form>
+</body>
+</html>
